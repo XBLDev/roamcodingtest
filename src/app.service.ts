@@ -44,7 +44,7 @@ export class AppService {
     if (todoindex < 0) {
       this.throwError('A todo item with id: ' + todoid + ' can not be found');
     }
-    this.todos = this.todos.filter(t => t.id !== todoid);
+    this.todos.splice(todoindex, 1);
   }
 
   validateTodo(todo) {
